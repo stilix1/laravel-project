@@ -1,0 +1,319 @@
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.hero-text h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.hero-description {
+    font-size: 18px;
+    color: #666;
+}
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Objective Section */
+.objective-section {
+    background-color: #ffffff;
+    padding: 40px 0;
+}
+.objective-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.objective-section p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Solution and Technologies Section */
+.solution-technologies-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+.solution, .technologies {
+    width: 45%;
+}
+.solution h2, .technologies h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+.technologies ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Design Section */
+.design-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+.design-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.design-section img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Features Section */
+.features-section {
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+.features-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.features-section ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.features-section li {
+    font-size: 16px;
+    color: #666;
+    background: #e9e9e9;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Results Section */
+.results-section {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+.results-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+.results-section p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Contact CTA */
+.contact-cta {
+    background-color: #1390e5;
+    padding: 60px 20px;
+    color: #ffffff;
+    text-align: center;
+}
+.contact-cta h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.contact-cta p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.contact-cta .button {
+    background-color: #ffffff;
+    color: #1390e5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* Фон для всего блока с наклоном и градиентом */
+.contact-section {
+    background: linear-gradient(135deg, #4da0ff, #72c4ff);
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-content {
+    text-align: right;
+    max-width: 400px;
+    margin-right: 20px;
+}
+
+/* Заголовок */
+.contact-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Стили формы */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Стили кнопок */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.attach-file, .send-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.attach-file:hover, .send-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Дисклеймер */
+.disclaimer {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 15px;
+    text-align: center;
+}
+
+.disclaimer a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+}
+
+/* Основной контейнер секции */
+.section {
+    background-color: #f9f9f9;
+    padding: 40px;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Стили для задачи и решения */
+.task, .solution-tech {
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* Подчеркивание заголовка */
+h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #007bff;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Стили для раздела Решение и Технологии */
+.solution-tech {
+    display: flex;
+    justify-content: space-between;
+}
+
+.solution, .technologies {
+    flex: 1;
+}
+
+.solution {
+    margin-right: 40px;
+}
+
+.technologies ul {
+    list-style: none;
+    padding: 0;
+    column-count: 2;
+    font-size: 16px;
+}
+
+.technologies li {
+    color: #333;
+    margin-bottom: 10px;
+}

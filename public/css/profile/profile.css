@@ -1,0 +1,43 @@
+.user-info p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.btn-edit, .btn-save {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #39d353;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover, .btn-save:hover {
+    background-color: #2bb344;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    color: #39d353;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #3c3c3c;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #e4e4e4;
+}
+
+form input:focus {
+    border-color: #39d353;
+    outline: none;
+    box-shadow: 0 0 5px rgba(57, 211, 83, 0.5);
+}

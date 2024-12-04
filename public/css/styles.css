@@ -1,0 +1,278 @@
+/* Общие стили для страницы */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Контейнер для контента */
+.container {
+    max-width: fit-content;
+    margin: auto;
+}
+
+/* Основной стиль для хедера */
+.header {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 10px 0; /* Уменьшено для аккуратного размещения */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Контейнер для центровки содержимого */
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Распределяем логотип и меню по краям контейнера */
+    width: 90%; /* Контейнер занимает 90% ширины хедера для центрирования */
+    max-width: 1200px; /* Максимальная ширина для больших экранов */
+}
+
+/* Логотип */
+.header__logo_div {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo_desk, .logo_mob {
+    height: 60px;
+}
+
+/* Стили для меню */
+.main-menu__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu__item {
+    position: relative;
+}
+
+/* Ссылки в меню */
+.main-menu__link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.main-menu__link:hover {
+    color: #00cc66;
+}
+
+/* Родительский элемент с позиционированием */
+.main-menu__item {
+    position: relative; /* позиционирования подменю относительно этого элемента */
+}
+
+/* Стиль для подменю */
+.main-menu__sub-list {
+    display: none; /* Скрыто по умолчанию */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-width: 100vw;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(10px); /* Легкий сдвиг по вертикали для анимации */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Показываем подменю при наведении на родительский элемент */
+.main-menu__item:hover .main-menu__sub-list {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Стили для подменю, которое появляется в фиксированном положении */
+.main-menu__sub-list {
+    position: fixed;
+    top: 60px; /* Расстояние от верхней границы экрана */
+    left: 0;
+    width: 100%;
+    max-width: 100vw;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    z-index: 1000; /* Поверх всех элементов */
+}
+
+/* Родительский блок для левой и правой части подменю */
+.sub-menu__content {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* Стиль для левой части подменю (Разработка и Дизайн) */
+.sub-menu__left {
+    width: 20%;
+    padding: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sub-menu__left a {
+    display: block;
+    padding: 12px 15px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #27ae60;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    width: 80%;
+}
+
+.sub-menu__left a:hover {
+    background-color: #2ecc71;
+}
+
+/* Стиль для правой части подменю (кнопки в 3 столба) */
+.sub-menu__right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+    width: 80%; /* 80% ширины */
+    box-sizing: border-box;
+}
+
+.sub-menu__right a {
+    display: block;
+    padding: 12px 15px;
+    color: #fff;
+    text-decoration: cadetblue;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin-bottom: 10px; /* Отступ между кнопками */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sub-menu__right a:hover {
+    background-color: #555;
+}
+
+/* Убираем отступы между кнопками в правой части подменю */
+.sub-menu__right a {
+    margin-bottom: 15px; /* отступы между кнопками */
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+    .sub-menu__left {
+        width: 100%; /* Для мобильных устройств левая часть будет растягиваться на всю ширину */
+    }
+
+    .sub-menu__right {
+        width: 100%; /* Для мобильных устройств правая часть будет растягиваться на всю ширину */
+        flex-direction: column;
+    }
+
+    .sub-menu__right a {
+        width: 100%; /* Кнопки в правой части растягиваются на всю ширину */
+    }
+}
+
+/* Стиль для футера */
+.footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 15px 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Контейнер для футера */
+.footer__container {
+    max-width: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Стили для обертки футера */
+.footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+}
+
+/* Логотип */
+.footer__logo_div {
+    display: inline-block;
+}
+
+.footer__logo_img {
+    height: 40px; /* Уменьшенная высота логотипа, аналогично хедеру */
+    width: auto;
+}
+
+/* Текст копирайта */
+.footer__text {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.main {
+    padding-top: 90px; /* отступ, равный высоте хедера */
+}
+
+/* Кнопка "Выйти" */
+.header-nav-item form button {
+    background-color: #7cffa1; /* Зеленый фон */
+    border: none;
+    color: #000; /* Темный текст */
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-nav-item a {
+    color: #7cffa1; /* Зеленый цвет текста */
+    font-size: 16px; /* Размер шрифта */
+    text-decoration: none; /* Убираем подчеркивание */
+    padding: 5px 10px; /* Добавляем отступы для пространства вокруг текста */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Плавный переход при наведении */
+    border-radius: 5px; /* Скругленные углы для фона при наведении */
+}
+
+/* Hover-эффект для текста */
+.header-nav-item a:hover {
+    color: #fff; /* Белый текст при наведении */
+    background-color: #27ae60; /* Зеленый фон при наведении */
+}
+

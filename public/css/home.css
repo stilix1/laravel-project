@@ -1,0 +1,263 @@
+/* Основной фон и текст */
+body {
+    background-color: #0f141e;
+    font-family: Arial, sans-serif;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Для всех элементов устанавливаем box-sizing: border-box */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Основной контейнер */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Общий стиль для всех секций */
+.section {
+    width: 65%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Заголовки секций */
+.section h2 {
+    color: #00cc66;
+    margin-bottom: 15px;
+}
+
+/* Текст внутри секций */
+.section p, .section ul {
+    color: #c0c0c0;
+    line-height: 1.6;
+}
+
+/* Стили для списков */
+.section ul {
+    list-style-type: disc;
+    padding-left: 1%;
+    text-align: center;
+}
+
+/* Кнопка */
+.promo-button {
+    display: inline-block;
+    padding: 15px 30px;
+    width: 250px;
+    margin-top: 20px;
+    border: 2px solid #00cc66;
+    border-radius: 15px;
+    background-color: #00cc66;
+    color: #0f141e;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.promo-button:hover {
+    background-color: #00994d;
+    color: #fff;
+}
+
+/* Стили для портфолио */
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.portfolio-gallery img {
+    width: 100%;
+    max-width: 290px;
+    border-radius: 8px;
+    border: 2px solid #00cc66;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.portfolio-gallery img:hover {
+    transform: scale(1.05);
+    border-color: #00994d;
+}
+
+/* Основной контейнер для секции с блоками */
+.features-section {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+/* Общие стили для каждого блока */
+.feature-block {
+    width: 37%;
+    height: 350px;
+    padding: 20px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Зеленый блок */
+.green-block {
+    background-color: #00cc66;
+}
+
+/* Синий блок */
+.blue-block {
+    background-color: #324164;
+}
+
+/* Стили заголовков */
+.feature-block h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Стили списка в синем блоке */
+.blue-block ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.blue-block li {
+    margin-bottom: 10px;
+}
+
+/* Вложенные элементы списка */
+.blue-block ul ul {
+    padding-left: 20px;
+}
+
+.blue-block ul ul li {
+    list-style-type: disc;
+    color: #cccccc;
+}
+
+/* Дополнительные стили для секций "Возможности для промо-сайтов" и "Создание Промо-сайтов" */
+.promo-section, .promo-features {
+    width: 65%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.promo-features img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Дополнительные стили для основного контейнера */
+.main {
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+/* Блик на фоне, закрепленный в верхней части */
+body::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(0, 204, 102, 0.3), transparent 60%);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Основной контейнер с содержимым */
+.main {
+    position: relative;
+    z-index: 1;
+}
+
+/* Медиазапросы для мобильных устройств */
+
+/* Для экранов шириной до 768px (планшеты и мобильные устройства) */
+@media (max-width: 768px) {
+    .section {
+        width: 90%; /* Увеличиваем ширину секций на мобильных устройствах */
+    }
+
+    .feature-block {
+        width: 90%; /* Увеличиваем ширину блоков */
+        height: auto; /* Убираем фиксированную высоту */
+    }
+
+    .promo-button {
+        width: 100%; /* Кнопка будет занимать всю ширину */
+    }
+
+    .portfolio-gallery {
+        flex-direction: column; /* Сетку портфолио делаем вертикальной */
+    }
+
+    .features-section {
+        flex-direction: column; /* Блоки будут располагаться вертикально */
+    }
+
+    .promo-section, .promo-features {
+        width: 90%; /* Ширина секций для мобильных устройств */
+    }
+}
+
+/* Для экранов шириной до 480px (мобильные телефоны) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Уменьшаем размер шрифта для мобильных */
+    }
+
+    .section {
+        width: 95%; /* Почти вся ширина экрана */
+    }
+
+    .feature-block {
+        width: 100%; /* Блоки становятся во всю ширину экрана */
+    }
+
+    .promo-button {
+        width: 100%; /* Кнопка на всю ширину экрана */
+    }
+}
+
+.view-more-button {
+    color: #7cffa1; /* Зеленый цвет текста */
+    font-size: 16px; /* Размер шрифта */
+    text-decoration: none; /* Убираем подчеркивание */
+    padding: 5px 10px; /* Добавляем отступы для пространства вокруг текста */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Плавный переход при наведении */
+    border-radius: 5px; /* Скругленные углы для фона при наведении */
+}

@@ -1,0 +1,295 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Общие стили для секций */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Секция с изображением и текстом */
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    background-color: #232325;
+}
+
+.main-section .text-content {
+    width: 50%;
+    padding-right: 30px;
+}
+
+.main-section .text-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.main-section .text-content p {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.main-section .image-content {
+    width: 50%;
+    text-align: right;
+}
+
+.main-section .image-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Секция задачи */
+.task-section {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.task-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.task-text, .task-details {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Секция решения и технологий */
+.solution-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+    padding: 40px 0;
+    background-color: #f4f4f4;
+    width: 100%;
+}
+
+.solution-left, .solution-right {
+    width: 48%;
+    box-sizing: border-box;
+}
+
+.solution-left h2, .solution-right h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.solution-text {
+    font-size: 16px;
+    color: #666;
+}
+
+.technologies-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.technologies-list li {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Секция дизайна */
+.design-section {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+}
+
+.design-image {
+    width: 100%;
+    height: auto;
+}
+
+.text-content h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.design-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Секция с динамическим дизайном */
+.dynamic-section {
+    display: flex;
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.dynamic-section .dynamic-image {
+    width: 50%;
+    height: auto;
+}
+
+.dynamic-section .text-content {
+    width: 50%;
+    padding-left: 30px;
+}
+
+.dynamic-text {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Секция с изображением на всю ширину */
+.full-width-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 40px;
+}
+
+/* Текст под изображением на всю ширину */
+.full-width-text {
+    padding: 20px 0;
+    background-color: #f4f4f4;
+}
+
+.full-width-text .full-width-text-content {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    line-height: 1.6;
+}
+/* Секция с формой отправки */
+.contact-form-section {
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Контейнер для формы */
+.form-wrapper {
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Градиентный фон под формой с неправильной верхней частью */
+.contact-form-section::before {
+    background: linear-gradient(135deg, #111111, #b71e1c);
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+/* Псевдоэлемент с волнообразным верхом и плавным переходом */
+.contact-form-section::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 300px; /* Высота блока с градиентом */
+    background: linear-gradient(135deg, #111111, #b71e1c);
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+    z-index: 0;
+}
+
+/* Стили для формы */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Группы элементов формы */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Место для ввода текста */
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Текстовое поле */
+textarea {
+    resize: vertical; /* Позволяет изменять размер по вертикали */
+}
+
+/* Кнопки */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.attach-files-button {
+    background-color: #f0f0f0;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.attach-files-button:hover {
+    background-color: #ccc;
+}
+
+.submit-button {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+/* Мелкий текст с ссылкой */
+.consent-text {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.consent-text a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.consent-text a:hover {
+    text-decoration: underline;
+}

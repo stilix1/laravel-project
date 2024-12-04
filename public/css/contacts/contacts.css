@@ -1,0 +1,76 @@
+.main {
+    background-color: #1a1a1a;
+}
+/* Основной стиль страницы контактов */
+.contacts-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #cccccc;
+    padding: 40px;
+}
+
+/* Заголовок страницы */
+.contacts-header h2 {
+    color: #00ff66;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contacts-header p {
+    color: #cccccc;
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Секция с контактной информацией */
+.contacts-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    gap: 20px;
+}
+
+/* Блок с каждым пунктом контактов */
+.contact-item {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    transition: transform 0.3s ease;
+    border: 2px solid #00ff66;
+}
+
+/* Эффект увеличения при наведении на блок */
+.contact-item:hover {
+    transform: scale(1.05);
+}
+
+/* Заголовок каждого элемента */
+.contact-item h3 {
+    color: #00ff66;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+/* Текст каждого элемента */
+.contact-item p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Ссылки */
+.contact-item a {
+    color: #00ff66;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #66ff99;
+}
