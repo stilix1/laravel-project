@@ -27,7 +27,8 @@
             <input type="password" name="password" id="password">
 
             <label for="date_of_birth">Дата рождения:</label>
-            <input type="date" name="date_of_birth" id="date_of_birth" value="{{ old('date_of_birth', $user->date_of_birth) }}">
+            <input type="date" name="date_of_birth" id="date_of_birth"
+                   value="{{ old('date_of_birth', $user->date_of_birth) }}">
 
             <button type="submit" class="btn-save">Сохранить изменения</button>
         </form>

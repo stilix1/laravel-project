@@ -77,7 +77,8 @@
                             <li><a href="{{ url('/contacts') }}" class="main-menu__link">Контакты</a></li>
                             @csrf
                             @if(Auth::check())
-                                <li class="header-nav-item"><a href="/profile">Добро пожаловать, {{ Auth::user()->name }}</a></li>
+                                <li class="header-nav-item"><a href="/profile">Добро
+                                        пожаловать, {{ Auth::user()->name }}</a></li>
                                 <li class="header-nav-item">
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
